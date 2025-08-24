@@ -20,11 +20,11 @@ export function DailyDrop() {
     <section id="daily-drop" className="py-20 px-4">
       <div className="container max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="relative">
-            <div className="aspect-square bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-8 border border-border">
+          <div className="relative group">
+            <div className="aspect-square glass-card rounded-3xl p-8 transform hover:rotate-y-12 transition-all duration-500 hover:scale-105 glow-primary">
               <div className="h-full flex flex-col items-center justify-center text-center space-y-6">
-                <div className="flex justify-center">
-                  <Gem size={96} className="text-primary" />
+                <div className="flex justify-center animate-float">
+                  <Gem size={96} className="text-primary animate-glow" />
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-2xl font-display font-bold">Today's Drop</h3>
@@ -39,7 +39,7 @@ export function DailyDrop() {
 
           <div className="space-y-6">
             <h2 className="text-3xl md:text-5xl font-display font-bold">
-              Daily drop: one day — one NFT
+              Daily drop: <span className="gradient-text">one day — one NFT</span>
             </h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -50,11 +50,13 @@ export function DailyDrop() {
 
             <div className="space-y-4">
               {facts.map((fact, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-display font-semibold">{fact.label}</h4>
-                    <p className="text-sm text-muted-foreground">{fact.value}</p>
+                <div key={index} className="glass-card p-4 rounded-xl transition-all duration-300 hover:scale-105">
+                  <div className="flex items-start space-x-3">
+                    <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0 animate-glow" />
+                    <div>
+                      <h4 className="font-display font-semibold text-foreground">{fact.label}</h4>
+                      <p className="text-sm text-muted-foreground">{fact.value}</p>
+                    </div>
                   </div>
                 </div>
               ))}

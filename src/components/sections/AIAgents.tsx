@@ -29,7 +29,7 @@ export function AIAgents() {
       <div className="container max-w-6xl mx-auto">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl md:text-5xl font-display font-bold">
-            From idea to MVP — powered by AI agents
+            From idea to <span className="gradient-text">MVP — powered by AI agents</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Engineering decisions made by automated agent pipeline; 
@@ -41,10 +41,10 @@ export function AIAgents() {
           {pipeline.map((step, index) => {
             const IconComponent = step.icon
             return (
-              <div key={index} className="space-y-4">
+              <div key={index} className="glass-card p-6 rounded-2xl space-y-4 transition-all duration-500 hover:scale-105">
                 <div className="text-center">
-                  <div className="flex justify-center mb-4">
-                    <IconComponent size={48} className="text-primary" />
+                  <div className="flex justify-center mb-4 animate-float" style={{animationDelay: `${index * 0.5}s`}}>
+                    <IconComponent size={48} className="text-primary animate-glow" />
                   </div>
                   <h3 className="text-xl font-display font-semibold mb-2">
                     {step.title}

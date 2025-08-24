@@ -45,7 +45,7 @@ export function Roadmap() {
       <div className="container max-w-6xl mx-auto">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl md:text-5xl font-display font-bold">
-            Where we're heading
+            Where <span className="gradient-text">we're heading</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Our journey to scale AI-powered fund operations
@@ -55,20 +55,20 @@ export function Roadmap() {
         <div className="grid md:grid-cols-3 gap-8">
           {phases.map((phase, index) => (
             <div key={index} className="relative flex">
-              <div className={`p-6 rounded-2xl border-2 bg-surface flex flex-col w-full ${
+              <div className={`glass-card p-6 rounded-2xl flex flex-col w-full transition-all duration-500 hover:scale-105 ${
                 phase.status === 'in-progress' 
-                  ? 'border-primary/30' 
-                  : 'border-border'
+                  ? 'border-primary/30 glow-primary' 
+                  : 'border-white/10'
               }`}>
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center justify-between">
                     <span className="text-sm font-medium text-primary">
                       {phase.phase}
                     </span>
-                    <div className={`px-3 py-1 rounded-full text-xs font-medium ${
+                    <div className={`px-3 py-1 rounded-full text-xs font-medium transition-all duration-300 ${
                       phase.status === 'in-progress' 
-                        ? 'bg-primary/10 text-primary border border-primary/20' 
-                        : 'bg-muted-foreground/10 text-muted-foreground border border-muted-foreground/20'
+                        ? 'gradient-primary text-white animate-glow' 
+                        : 'bg-white/5 text-muted-foreground border border-white/10'
                     }`}>
                       {phase.status === 'in-progress' ? 'In Progress' : 'Planned'}
                     </div>

@@ -26,7 +26,7 @@ export function WhyTimequity() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-5xl font-display font-bold">
-              Why Timequity
+              Why <span className="gradient-text">Timequity</span>
             </h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -37,7 +37,7 @@ export function WhyTimequity() {
 
             <div className="grid sm:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="space-y-2">
+                <div key={index} className="glass-card p-4 rounded-xl space-y-2 transition-all duration-300 hover:scale-105">
                   <h3 className="font-display font-semibold text-foreground">
                     {benefit.title}
                   </h3>
@@ -49,13 +49,13 @@ export function WhyTimequity() {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center">
+          <div className="relative group">
+            <div className="aspect-square glass-card rounded-2xl flex items-center justify-center glow-primary transition-all duration-500 hover:scale-105">
               <div className="text-center space-y-4">
-                <div className="flex justify-center">
-                  <Bot size={96} className="text-primary" />
+                <div className="flex justify-center animate-float">
+                  <Bot size={96} className="text-primary animate-glow" />
                 </div>
-                <div className="text-xl font-display font-semibold">
+                <div className="text-xl font-display font-semibold gradient-text">
                   AI Builds = Real Equity
                 </div>
                 <div className="text-muted-foreground">

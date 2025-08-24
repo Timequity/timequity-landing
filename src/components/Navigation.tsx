@@ -28,11 +28,11 @@ export function Navigation() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-white/10">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <h1 className="text-xl font-display font-bold">Timequity</h1>
+            <h1 className="text-xl font-display font-bold gradient-text">Timequity</h1>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -40,7 +40,7 @@ export function Navigation() {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-105 px-3 py-1 rounded-lg hover:bg-white/5"
               >
                 {item.label}
               </button>
